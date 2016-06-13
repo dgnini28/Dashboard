@@ -1,0 +1,22 @@
+<div class="horizontal-scroll">
+  <table class="table table-hover">
+    <thead>
+    <tr class="black-muted-bg">
+      <th class="browser-icons"></th>
+      <th>Countries</th>
+      <th>Users</th>
+      <th class="align-right">% User</th>
+      <th class="table-arr"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="item in metricsTableData" class="no-top-border">
+      <td style="background-color: {{::item.color}}"></td>
+      <td ng-class="nowrap">{{item.browser}}</td>
+      <td>{{item.users}}</td>
+      <td class="align-right">{{item.percent}}</td>
+      <td class="table-arr"><i ng-class="{'icon-up': item.isPercentUp, 'icon-down': !item.isPercentUp }"></i></td>
+    </tr>      
+    </tbody>
+  </table>
+</div>

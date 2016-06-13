@@ -1,0 +1,20 @@
+<div class="horizontal-scroll">
+  <table class="table table-hover">
+    <thead>
+    <tr class="black-muted-bg">
+      <th class="browser-icons"></th>
+      <th class="align-left">Labels</th>
+      <th>Values</th>
+      <th class="align-right">Percent %</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="item in doughnutData" class="no-top-border">
+      <td style="background-color: {{::item.color}}"></td>
+      <td ng-class="nowrap" >{{item.label}}</td>
+      <td >{{item.value}}k</td>
+      <td class="align-right">{{item.percentage}}</td>
+    </tr>      
+    </tbody>
+  </table>
+</div>
